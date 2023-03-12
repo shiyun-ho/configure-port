@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Picture Generator</title>
+</head>
+<body>
+    <h2>Using the randomNumber directly</h2>
+    <img data-th-src="@{/numbers/number{i}.jpg(i=${randomNumber})}" height="250">
+    <h2>Using just the string</h2>
+    <img th:src="${imgUrl}" height="250">
+    <h2>Trying to play with Thymeleaf</h2>
+    <!-- Logic: data-th-src="@{imgage url/number{i}.jpg(i=variable in java controller)}" -->
+    <img data-th-src="@{/numbers/number{i}.jpg(i=2)}" height="250">
+</body>
+</html>
